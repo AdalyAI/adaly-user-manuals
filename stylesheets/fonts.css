@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('../assets/fonts/geist-font-1.5.1/fonts/Geist/ttf/Geist-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Geist Title Mono';
+    src: url('../assets/fonts/geist-font-1.5.1/fonts/Geist/ttf/Geist-Light.ttf') format('truetype');
+  }
+
+
+.md-ellipsis {
+    font-family: 'Geist Title Mono';
+    color: black;
+}
+
