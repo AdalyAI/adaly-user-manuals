@@ -1,0 +1,14 @@
+site_name: Manual
+theme:
+  name: material
+  logo: assets/logos/adaly.png
+  favicon: assets/logos/adaly.png # looks weird rn
+  font: 
+    text: Geist
+  palette:
+    scheme: default
+    primary: grey
+    accent: deep orange
+extra_css:
+  - stylesheets/fonts.css
+  - stylesheets/colors.css

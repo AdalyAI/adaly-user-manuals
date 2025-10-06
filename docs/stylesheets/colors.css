@@ -1,0 +1,12 @@
+/* Navbar background as image */
+.md-header {
+    background: url("../assets/site-elements/navbar.png") no-repeat center center;
+    background-size: cover;   /* fill navbar width */
+    border-bottom: 1px solid #E5E5E5;  /* grey outline */
+    box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.09); /* drop shadow */
+  }
+
+.md-logo {
+    filter: none !important;
+    opacity: 1 !important;
+}
