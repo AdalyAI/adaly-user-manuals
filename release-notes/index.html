@@ -1,0 +1,1558 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../chat/queries/querying-a-data-source/">
+      
+      
+      <link rel="icon" href="../assets/logos/adaly.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Release Notes - Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Geist";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/fonts.css">
+    
+      <link rel="stylesheet" href="../stylesheets/colors.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Manual" class="md-header__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../assets/logos/adaly.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Manual" class="md-nav__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../assets/logos/adaly.png" alt="logo">
+
+    </a>
+    Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Adaly
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Notes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latest-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latest Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Latest Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v246" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v245" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v244" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v243" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v240" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-2x-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2.x Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.x Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v230" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.3.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v220" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.2.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v210" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-1x-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.x Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.x Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v132" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v131" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v130" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v120" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.2.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v110" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v100" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Queries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Queries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/queries/querying-a-data-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Querying a Data Source
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/queries/querying-a-file-upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Querying a File Upload
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/queries/querying-multiple-data-sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query multiple Data Sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/queries/sample-queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Queries by Data Source
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/authenticate-connector-for-brand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authenticating a Connector for all brands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configure connectors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configure connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-chatgpt-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure ChatGPT Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-civic-science-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Civic Science Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-claude-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Claude Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-cohere-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Cohere Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-ga4-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure GA4 Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-gemini-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Gemini Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-grok-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Grok Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-gwi-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure GWI Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-perplexity-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Perplexity Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-snowflake-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Snowflake Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-statista-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Statista Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/configure-connectors/configure-yougov-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Snowflake Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Connector requests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connector requests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/connector-requests/confirm-a-connector-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confirm a Connector Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/connector-requests/request-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request a Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Profile
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Profile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profile/change-your-name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change Your Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profile/change-your-password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change Your Password
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#latest-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latest Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Latest Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v246" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v245" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v244" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v243" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v240" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-2x-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2.x Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 2.x Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v230" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.3.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v220" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.2.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v210" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-1x-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 1.x Releases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 1.x Releases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v132" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v131" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v130" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v120" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.2.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v110" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v100" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="release-notes">Release Notes</h1>
+<p>Welcome to Adaly's release notes. Below you'll find a comprehensive list of all releases with summaries and links to the full documentation.</p>
+<hr />
+<h2 id="latest-releases">Latest Releases</h2>
+<h3 id="v246">v2.4.6</h3>
+<p>Oct 1, 2025</p>
+<p>Today’s release includes a powerful new way to collaborate with your team’s data, fresh updates to our YouGov integration, and several platform-wide bug fixes.</p>
+<p><a href="../release-notes-files/v2.4.6.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v245">v2.4.5</h3>
+<p>Sep 24, 2025</p>
+<p>This release debuts the Agentics Reporting Agent, automatically generating reports from saved insights without interrupting workflows, alongside platform-wide bug fixes and performance enhancements for a smoother Adaly experience.</p>
+<p><a href="../release-notes-files/v2.4.5.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v244">v2.4.4</h3>
+<p>Sep 17, 2025</p>
+<p>This week’s update is short and sweet—but a meaningful one for anyone using YouGov data on the platform.</p>
+<p><a href="../release-notes-files/v2.4.4.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v243">v2.4.3</h3>
+<p>Sep 10, 2025</p>
+<p>Welcome to this week’s release! This update focuses on enhancing first-time user experience, improving transparency in data sourcing, and resolving a few lingering bugs. Here’s what’s new!</p>
+<p><a href="../release-notes-files/v2.4.3.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v240">v2.4.0</h3>
+<p>Aug 20, 2025</p>
+<p>This release adds CivicScience data, introduces Shelves to save and reuse top responses, and supports CSV uploads, giving you smarter insights, better organization, and more flexible data control in Adaly.</p>
+<p><a href="../release-notes-files/v2.4.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h2 id="version-2x-releases">Version 2.x Releases</h2>
+<h3 id="v230">v2.3.0</h3>
+<p>Aug 13, 2025</p>
+<p>This release streamlines workflows with Excel uploads for instant querying and new bulk chat management tools, making data handling and organization in Adaly faster and more efficient.</p>
+<p><a href="../release-notes-files/v2.3.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v220">v2.2.0</h3>
+<p>July 31, 2025</p>
+<p>This release adds Grok for real-time social sentiment and ChatGPT integration for direct querying, alongside platform-wide performance boosts and re-enabled text-to-speech for a faster, more dynamic Adaly experience.</p>
+<p><a href="../release-notes-files/v2.2.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v210">v2.1.0</h3>
+<p>July 11, 2025</p>
+<p>This release enhances flexibility and access with Stripe integration, GA-4 authentication, and expanded LLM support (Cohere, Claude, Gemini). Updated RBAC improves onboarding and credentialed platform access for a smoother, more unified experience.</p>
+<p><a href="../release-notes-files/v2.1.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h2 id="version-1x-releases">Version 1.x Releases</h2>
+<h3 id="v132">v1.3.2</h3>
+<p>May 22, 2025</p>
+<p>This release introduces @adaly, a smarter research agent for faster decisions, and a refreshed sign-up flow with improved design, validation, and transparent terms for a smoother onboarding experience.</p>
+<p><a href="../release-notes-files/v1.3.2.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v131">v1.3.1</h3>
+<p>May 13, 2025</p>
+<p>This release introduces major backend upgrades, enhancing speed, reliability, and scalability — laying the foundation for a more powerful, seamless, and future-ready platform experience.</p>
+<p><a href="../release-notes-files/v1.3.1.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v130">v1.3.0</h3>
+<p>Apr 28, 2025</p>
+<p>This release launches My Data, allowing users to securely upload and organize documents or URLs by Brand. We’ve also delivered platform-wide bug fixes for a smoother, more reliable experience.</p>
+<p><a href="../release-notes-files/v1.3.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v120">v1.2.0</h3>
+<p>Apr 15, 2025</p>
+<p>This release introduces Library — automatically saving and organizing chat threads for easy access — and enhances @Research, expanding data depth and delivering richer, more detailed insights across user queries.</p>
+<p><a href="../release-notes-files/v1.2.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v110">v1.1.0</h3>
+<p>Apr 9, 2025</p>
+<p>This release enhances the chat experience with Chain of Thought reasoning, suggested follow-up queries, improved @Search results, and a new Profile page for managing user information and preferences.</p>
+<p><a href="../release-notes-files/v1.1.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<h3 id="v100">v1.0.0</h3>
+<p>Mar 31, 2025</p>
+<p>This release adds @Search, @General, Team Management, new company sign-up with role controls, integration-level data access, and brand voices — customizable filters that shape each user’s chat and data experience.</p>
+<p><a href="../release-notes-files/v1.0.0.pdf" target="_blank">📄 <strong>View Full Release Notes</strong></a></p>
+<hr />
+<p><em>For questions about any release, please contact our team.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
