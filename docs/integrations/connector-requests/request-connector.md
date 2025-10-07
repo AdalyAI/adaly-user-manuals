@@ -1,5 +1,7 @@
 # Request a Connector
 
+Requesting a Connector is how Company Members can gain access to new Data Sources. Below is a step by step guide on how to do so, feel free to apply this to the Connector of your choice!
+
 1\. Hover over the Plus icon to open the Navigation Menu
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/ce82b09a-d097-483f-bc06-510a0888f230/ascreenshot.jpeg?tl_px=0,161&br_px=2220,1402&force_format=jpeg&q=100&width=1120.0)

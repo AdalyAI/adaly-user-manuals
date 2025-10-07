@@ -1,5 +1,7 @@
 # Confirm a Connector Request
 
+After a Member makes a request, an Admin needs to approve their Connector Request in order for them to be able to use it. This guide provides step by step instructions for any Admin with paid access.
+
 1\. Hover over the Plus icon to open the Navigation Menu
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/a24d6f59-389e-4fe7-a90b-66cc0e0063d2/ascreenshot.jpeg?tl_px=0,161&br_px=2220,1402&force_format=jpeg&q=100&width=1120.0)

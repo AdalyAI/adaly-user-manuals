@@ -19,3 +19,39 @@
   opacity: 1 !important;
   color: #ffffff !important;
 }
+
+/* Image styling for markdown content */
+.md-content img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 24px 0;
+}
+
+.md-content img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Different styling for images in specific contexts */
+.md-content .release-notes img {
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Center images by default */
+.md-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Better text spacing and margins */
+.md-content {
+  line-height: 1.7;
+}
+
+.md-content p {
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
