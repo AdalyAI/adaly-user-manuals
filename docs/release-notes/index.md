@@ -1,0 +1,152 @@
+# Release Notes
+
+Welcome to Adaly's release notes. Below you'll find a comprehensive list of all releases with summaries and links to the full documentation.
+
+---
+
+## Latest Releases
+
+### v2.4.6
+Oct 1, 2025
+
+
+Today’s release includes a powerful new way to collaborate with your team’s data, fresh updates to our YouGov integration, and several platform-wide bug fixes.
+
+[📄 **View Full Release Notes**](files/v2.4.6.pdf){:target="_blank"}
+
+---
+
+### v2.4.5
+Sep 24, 2025
+
+
+This release debuts the Agentics Reporting Agent, automatically generating reports from saved insights without interrupting workflows, alongside platform-wide bug fixes and performance enhancements for a smoother Adaly experience.
+
+[📄 **View Full Release Notes**](files/v2.4.5.pdf){:target="_blank"}
+
+---
+
+### v2.4.4
+Sep 17, 2025
+
+
+This week’s update is short and sweet—but a meaningful one for anyone using YouGov data on the platform.
+
+[📄 **View Full Release Notes**](files/v2.4.4.pdf){:target="_blank"}
+
+---
+
+### v2.4.3
+Sep 10, 2025
+
+
+Welcome to this week’s release! This update focuses on enhancing first-time user experience, improving transparency in data sourcing, and resolving a few lingering bugs. Here’s what’s new!
+
+[📄 **View Full Release Notes**](files/v2.4.3.pdf){:target="_blank"}
+
+---
+
+### v2.4.0
+Aug 20, 2025
+
+This release adds CivicScience data, introduces Shelves to save and reuse top responses, and supports CSV uploads, giving you smarter insights, better organization, and more flexible data control in Adaly.
+
+[📄 **View Full Release Notes**](files/v2.4.0.pdf){:target="_blank"}
+
+---
+
+## Version 2.x Releases
+
+### v2.3.0
+Aug 13, 2025
+
+
+This release streamlines workflows with Excel uploads for instant querying and new bulk chat management tools, making data handling and organization in Adaly faster and more efficient.
+
+[📄 **View Full Release Notes**](files/v2.3.0.pdf){:target="_blank"}
+
+---
+
+### v2.2.0
+July 31, 2025
+
+
+We’ve made several meaningful updates to enhance access, flexibility, and functionality across the platform.
+
+[📄 **View Full Release Notes**](files/v2.2.0.pdf){:target="_blank"}
+
+---
+
+### v2.1.0
+July 11, 2025
+
+
+We’ve made several meaningful updates to enhance access, flexibility, and functionality across the platform.
+
+[📄 **View Full Release Notes**](files/v2.1.0.pdf){:target="_blank"}
+
+---
+
+## Version 1.x Releases
+
+### v1.3.2
+May 22, 2025
+
+
+This release introduces @adaly, a smarter research agent for faster decisions, and a refreshed sign-up flow with improved design, validation, and transparent terms for a smoother onboarding experience.
+
+[📄 **View Full Release Notes**](files/v1.3.2.pdf){:target="_blank"}
+
+---
+
+### v1.3.1
+May 13, 2025
+
+
+This release introduces major backend upgrades, enhancing speed, reliability, and scalability — laying the foundation for a more powerful, seamless, and future-ready platform experience.
+
+[📄 **View Full Release Notes**](files/v1.3.1.pdf){:target="_blank"}
+
+---
+
+### v1.3.0
+Apr 28, 2025
+
+
+This release launches My Data, allowing users to securely upload and organize documents or URLs by Brand. We’ve also delivered platform-wide bug fixes for a smoother, more reliable experience.
+
+[📄 **View Full Release Notes**](files/v1.3.0.pdf){:target="_blank"}
+
+---
+
+### v1.2.0
+Apr 15, 2025
+
+
+This release introduces Library — automatically saving and organizing chat threads for easy access — and enhances @Research, expanding data depth and delivering richer, more detailed insights across user queries.
+
+[📄 **View Full Release Notes**](files/v1.2.0.pdf){:target="_blank"}
+
+---
+
+### v1.1.0
+Apr 9, 2025
+
+
+This release enhances the chat experience with Chain of Thought reasoning, suggested follow-up queries, improved @Search results, and a new Profile page for managing user information and preferences.
+
+[📄 **View Full Release Notes**](files/v1.1.0.pdf){:target="_blank"}
+
+---
+
+### v1.0.0
+Mar 31, 2025
+
+
+This release adds @Search, @General, Team Management, new company sign-up with role controls, integration-level data access, and brand voices — customizable filters that shape each user’s chat and data experience.
+
+[📄 **View Full Release Notes**](files/v1.0.0.pdf){:target="_blank"}
+
+---
+
+*For questions about any release, please contact our team.*
