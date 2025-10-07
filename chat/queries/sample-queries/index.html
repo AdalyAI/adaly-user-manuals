@@ -1,0 +1,4078 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../querying-multiple-data-sources/">
+      
+      
+        <link rel="next" href="../../../integrations/authenticate-connector-for-brand/">
+      
+      
+      <link rel="icon" href="../../../assets/logos/adaly.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Sample Queries by Data Source - Manual</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Geist:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Geist";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/fonts.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/colors.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sample-queries-by-data-source" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Manual" class="md-header__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../../../assets/logos/adaly.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sample Queries by Data Source
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Manual" class="md-nav__button md-logo" aria-label="Manual" data-md-component="logo">
+      
+  <img src="../../../assets/logos/adaly.png" alt="logo">
+
+    </a>
+    Manual
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Adaly's User Manual
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Chat
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chat
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Queries
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Queries
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../querying-a-data-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Querying a Data Source
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../querying-a-file-upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Querying a File Upload
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../querying-multiple-data-sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Query multiple Data Sources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Sample Queries by Data Source
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sample Queries by Data Source
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#civic-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Civic Science
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Civic Science">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consumer-sentiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Sentiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifestyle-behavioral-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifestyle &amp; Behavioral Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-intent-brand-affinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchase Intent &amp; Brand Affinity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demographics-audience-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demographics &amp; Audience Segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#political-cultural-social-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Political, Cultural &amp; Social Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitudinal-trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitudinal Trend Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statista
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Statista">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#industry-market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry &amp; Market Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-demographics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Demographics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economic-financial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Economic &amp; Financial Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regional-country-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regional &amp; Country Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marketing-advertising-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing &amp; Advertising Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#research-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-creation-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Creation &amp; Writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-solving-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Solving &amp; Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-thinking-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Thinking &amp; Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Social">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brand-mentions-sentiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brand Mentions &amp; Sentiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trending-topics-hashtags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trending Topics &amp; Hashtags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-language-behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Language &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Platform Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topic-keyword-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topic &amp; Keyword Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marketing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-revenue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sales &amp; Revenue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis &amp; Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-industry-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market &amp; Industry Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yougov" class="md-nav__link">
+    <span class="md-ellipsis">
+      YouGov
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YouGov">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audiences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life-style-interests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Life Style Interests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perplexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perplexity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perplexity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-industry-trends_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market &amp; Industry Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gemini
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gemini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-processing-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Processing &amp; Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-content-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative Content &amp; Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis &amp; Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-thinking-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Thinking &amp; Planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-analytical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical &amp; Analytical Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gwi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GWI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GWI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital-behavior-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Behavior &amp; Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-commerce-consumer-purchasing-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-Commerce &amp; Consumer Purchasing Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-consumption-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Consumption &amp; Engagement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-reach-demographic-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Reach &amp; Demographic Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-market-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-time Market Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#research-summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Research
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-trends-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Trends &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grok" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grok
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#social-media-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Media Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-ads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta Ads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta Ads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-performance-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campaign Performance Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-segmentation-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Segmentation &amp; Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Platform Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roi-optimization-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROI Optimization &amp; Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-ads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Ads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Ads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campaign Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-conversion-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost &amp; Conversion Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segmentation-by-device-location-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation by Device, Location &amp; Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-score-competitive-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Score &amp; Competitive Positioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-based-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-Based Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mydata" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyData
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyData">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organize-query-by-folder-or-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize &amp; Query by Folder or File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-file-type-strengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand File Type Strengths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-cross-document-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Cross-Document Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-urls-for-dynamic-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use URLs for Dynamic Referencing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cohere
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cohere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-generation-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Generation &amp; Writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-understanding-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Understanding &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-categorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification &amp; Categorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-information-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search &amp; Information Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/authenticate-connector-for-brand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Authenticating a Connector for all brands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configure connectors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Configure connectors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-chatgpt-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure ChatGPT Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-civic-science-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Civic Science Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-claude-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Claude Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-cohere-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Cohere Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-ga4-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure GA4 Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-gemini-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Gemini Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-grok-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Grok Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-gwi-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure GWI Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-perplexity-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Perplexity Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-snowflake-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Snowflake Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-statista-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Statista Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/configure-connectors/configure-yougov-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure Snowflake Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Connector requests
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Connector requests
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/connector-requests/confirm-a-connector-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Confirm a Connector Request
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/connector-requests/request-connector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Request a Connector
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Profile
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Profile
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../profile/change-your-name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change Your Name
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../profile/change-your-password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Change Your Password
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#civic-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Civic Science
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Civic Science">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consumer-sentiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Sentiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifestyle-behavioral-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lifestyle &amp; Behavioral Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purchase-intent-brand-affinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchase Intent &amp; Brand Affinity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demographics-audience-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demographics &amp; Audience Segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#political-cultural-social-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Political, Cultural &amp; Social Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitudinal-trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Longitudinal Trend Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statista
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Statista">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#industry-market-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry &amp; Market Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-demographics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Demographics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#economic-financial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Economic &amp; Financial Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regional-country-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regional &amp; Country Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marketing-advertising-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing &amp; Advertising Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#research-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-creation-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Creation &amp; Writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-solving-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem Solving &amp; Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-thinking-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Thinking &amp; Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#social" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Social">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brand-mentions-sentiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brand Mentions &amp; Sentiment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trending-topics-hashtags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trending Topics &amp; Hashtags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-language-behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Language &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Platform Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topic-keyword-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topic &amp; Keyword Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Trends
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marketing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marketing Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales-revenue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sales &amp; Revenue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Channel Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis &amp; Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-industry-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market &amp; Industry Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yougov" class="md-nav__link">
+    <span class="md-ellipsis">
+      YouGov
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YouGov">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#audiences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audiences
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Behavior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#life-style-interests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Life Style Interests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perplexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perplexity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Perplexity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-industry-trends_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market &amp; Industry Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gemini
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gemini">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#information-processing-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Processing &amp; Research
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creative-content-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creative Content &amp; Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis &amp; Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-thinking-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Thinking &amp; Planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-analytical-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical &amp; Analytical Support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gwi" class="md-nav__link">
+    <span class="md-ellipsis">
+      GWI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GWI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digital-behavior-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Digital Behavior &amp; Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-commerce-consumer-purchasing-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      E-Commerce &amp; Consumer Purchasing Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-consumption-engagement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Consumption &amp; Engagement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-reach-demographic-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Reach &amp; Demographic Trends
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-market-opportunities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-time Market Opportunities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#research-summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication &amp; Reporting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Research
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Research">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-trends-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Trends &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-dynamics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer-insights-behaviour_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer Insights &amp; Behaviour
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emerging-tech-innovations_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emerging Tech &amp; Innovations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-economic-indicators_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy &amp; Economic Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cultural-social-shifts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cultural &amp; Social Shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grok" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grok
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grok">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#social-media-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Social Media Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic Intelligence
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meta-ads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta Ads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meta Ads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-performance-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campaign Performance Analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audience-segmentation-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audience Segmentation &amp; Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-platform-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Platform Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roi-optimization-forecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROI Optimization &amp; Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-ads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Ads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Ads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Campaign Performance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cost-conversion-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost &amp; Conversion Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segmentation-by-device-location-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segmentation by Device, Location &amp; Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-score-competitive-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Score &amp; Competitive Positioning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-based-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time-Based Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mydata" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyData
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MyData">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organize-query-by-folder-or-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize &amp; Query by Folder or File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-file-type-strengths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand File Type Strengths
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-cross-document-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Cross-Document Insights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-urls-for-dynamic-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use URLs for Dynamic Referencing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cohere" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cohere
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cohere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-generation-writing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Generation &amp; Writing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language-understanding-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Understanding &amp; Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-summarization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Summarization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-categorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification &amp; Categorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-information-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search &amp; Information Retrieval
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sample-queries-by-data-source">Sample Queries by Data Source</h1>
+<p>This document provides sample queries for each data source available in the Adaly platform, organized by category and use case.</p>
+<h2 id="civic-science">Civic Science</h2>
+<h3 id="consumer-sentiment">Consumer Sentiment</h3>
+<p>Track shifts in consumer mood, confidence, and priorities.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How has public sentiment about the economy changed?</p>
+</li>
+<li>
+<p>What are consumers most concerned about heading into the next quarter?</p>
+</li>
+</ul>
+<h3 id="lifestyle-behavioral-trends">Lifestyle &amp; Behavioral Trends</h3>
+<p>Explore evolving habits and lifestyle choices.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Are more people cooking at home versus dining out?</p>
+</li>
+<li>
+<p>How are health and wellness priorities shifting?</p>
+</li>
+</ul>
+<h3 id="purchase-intent-brand-affinity">Purchase Intent &amp; Brand Affinity</h3>
+<p>Understand what people plan to buy and the brands they love.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which brands are gaining loyalty in the fashion industry?</p>
+</li>
+<li>
+<p>What factors are driving purchase decisions for electric vehicles?</p>
+</li>
+</ul>
+<h3 id="demographics-audience-segmentation">Demographics &amp; Audience Segmentation</h3>
+<p>Get granular views of specific audience groups.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do Gen Z's media consumption habits differ from Millennials?</p>
+</li>
+<li>
+<p>Which income segments are most optimistic about travel plans?</p>
+</li>
+</ul>
+<h3 id="political-cultural-social-insights">Political, Cultural &amp; Social Insights</h3>
+<p>Follow evolving opinions on current events and societal issues.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How are attitudes toward renewable energy changing?</p>
+</li>
+<li>
+<p>What cultural trends are resonating most with younger voters?</p>
+</li>
+</ul>
+<h3 id="longitudinal-trend-analysis">Longitudinal Trend Analysis</h3>
+<p>Leverage a decade of historical data to spot patterns over time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How has consumer trust in tech companies evolved?</p>
+</li>
+<li>
+<p>Which lifestyle changes from the pandemic era are here to stay?</p>
+</li>
+</ul>
+<hr />
+<h2 id="statista">Statista</h2>
+<h3 id="industry-market-analysis">Industry &amp; Market Analysis</h3>
+<p>Dive into detailed insights across various industries and markets.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the current trends shaping the tech industry?</p>
+</li>
+<li>
+<p>How is the automotive market evolving globally?</p>
+</li>
+</ul>
+<h3 id="consumer-insights-demographics">Consumer Insights &amp; Demographics</h3>
+<p>Understand consumer behaviours, preferences, and demographics.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which demographic segments have the highest purchasing power?</p>
+</li>
+<li>
+<p>How have consumer habits changed in the past year?</p>
+</li>
+</ul>
+<h3 id="economic-financial-data">Economic &amp; Financial Data</h3>
+<p>Access robust economic indicators and financial metrics.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the latest GDP forecasts for major economies?</p>
+</li>
+<li>
+<p>How are global inflation rates trending?</p>
+</li>
+</ul>
+<h3 id="regional-country-statistics">Regional &amp; Country Statistics</h3>
+<p>Explore precise data tailored to specific regions and countries.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What's the market outlook for renewable energy in Europe?</p>
+</li>
+<li>
+<p>Which industries drive economic growth in Asia?</p>
+</li>
+</ul>
+<h3 id="marketing-advertising-trends">Marketing &amp; Advertising Trends</h3>
+<p>Gain insights into marketing effectiveness and advertising trends.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which advertising channels offer the best ROI?</p>
+</li>
+<li>
+<p>How are digital marketing budgets changing?</p>
+</li>
+</ul>
+<hr />
+<h2 id="claude">Claude</h2>
+<h3 id="research-analysis">Research &amp; Analysis</h3>
+<p>Claude can help analyze information, synthesize findings, and provide insights on complex topics.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Analyze market trends and provide strategic recommendations</p>
+</li>
+<li>
+<p>Compare and contrast different business approaches or models</p>
+</li>
+</ul>
+<h3 id="content-creation-writing">Content Creation &amp; Writing</h3>
+<p>Claude generates high-quality content tailored to your specific needs and audience.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Draft marketing copy, reports, and strategic documents</p>
+</li>
+<li>
+<p>Create compelling narratives from data and research findings</p>
+</li>
+</ul>
+<h3 id="problem-solving-strategy">Problem Solving &amp; Strategy</h3>
+<p>Claude breaks down complex problems and helps develop actionable solutions.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Identify potential challenges and suggest mitigation strategies</p>
+</li>
+<li>
+<p>Help brainstorm innovative approaches to business challenges</p>
+</li>
+</ul>
+<h3 id="data-interpretation">Data Interpretation</h3>
+<p>Claude transforms complex data into clear, actionable insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Explain statistical findings in plain language</p>
+</li>
+<li>
+<p>Identify patterns and trends in research data</p>
+</li>
+</ul>
+<h3 id="critical-thinking-reasoning">Critical Thinking &amp; Reasoning</h3>
+<p>Claude applies logical reasoning to evaluate arguments and assess information quality.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Evaluate the strengths and weaknesses of different approaches</p>
+</li>
+<li>
+<p>Help you think through complex decisions with multiple factors</p>
+</li>
+</ul>
+<hr />
+<h2 id="social">Social</h2>
+<h3 id="brand-mentions-sentiment">Brand Mentions &amp; Sentiment</h3>
+<p>See what people are saying about specific brands and how they feel about them.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which brands are generating the most buzz on social media today?</p>
+</li>
+<li>
+<p>What is the overall sentiment (positive, negative, neutral) toward a particular brand?</p>
+</li>
+</ul>
+<h3 id="trending-topics-hashtags">Trending Topics &amp; Hashtags</h3>
+<p>Uncover the hottest conversations, keywords, and hashtags gaining momentum.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which topics are currently trending across different social platforms?</p>
+</li>
+<li>
+<p>What hashtags are people using most frequently in relation to a given event or topic?</p>
+</li>
+</ul>
+<h3 id="audience-language-behaviour">Audience Language &amp; Behaviour</h3>
+<p>Dive into the words and phrases people use to talk about products, issues, or experiences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do users describe their experience with a new product launch?</p>
+</li>
+<li>
+<p>What common language patterns emerge when discussing sustainability or health?</p>
+</li>
+</ul>
+<h3 id="cross-platform-analysis">Cross-Platform Analysis</h3>
+<p>Compare conversations taking place on different social media sites and forums.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which platform hosts the most active discussions about a certain topic?</p>
+</li>
+<li>
+<p>How does user sentiment differ between Twitter and Reddit?</p>
+</li>
+</ul>
+<h3 id="topic-keyword-insights">Topic &amp; Keyword Insights</h3>
+<p>Identify key themes, subtopics, and related keywords in online discussions.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the main concerns or pain points expressed around a new policy?</p>
+</li>
+<li>
+<p>Which related keywords often appear alongside a specific product or brand?</p>
+</li>
+</ul>
+<h3 id="cultural-social-trends">Cultural &amp; Social Trends</h3>
+<p>Spot emerging cultural moments and social shifts in real time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What new slang or terminology is gaining traction among younger audiences?</p>
+</li>
+<li>
+<p>How are users responding to major cultural events or global news stories?</p>
+</li>
+</ul>
+<hr />
+<h2 id="analytics">Analytics</h2>
+<h3 id="marketing-performance">Marketing Performance</h3>
+<p>Monitor and compare key performance metrics across multiple advertising channels.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does your ad spend correlate with the number of impressions?</p>
+</li>
+<li>
+<p>Which campaigns are driving the most clicks over time?</p>
+</li>
+</ul>
+<h3 id="sales-revenue">Sales &amp; Revenue</h3>
+<p>Track conversions and revenue to measure the impact of your marketing efforts.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Observe how sales fluctuate over different time periods</p>
+</li>
+<li>
+<p>Visualize each stage in your customers' journey, from clicks to final purchases</p>
+</li>
+</ul>
+<h3 id="audience-insights">Audience Insights</h3>
+<p>Look at geographical or demographic data to understand where your audiences are most engaged.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Pinpoint where the majority of your traffic or conversions originate</p>
+</li>
+<li>
+<p>See if your marketing attracts fresh leads or encourages repeat purchases</p>
+</li>
+</ul>
+<h3 id="channel-comparison">Channel Comparison</h3>
+<p>Determine which traffic sources (e.g., Facebook, Google, Bing) are most effective for your goals.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Compare return on ad spend across different channels</p>
+</li>
+<li>
+<p>Identify where your audience interacts most before converting</p>
+</li>
+</ul>
+<h3 id="trend-analysis-forecasting">Trend Analysis &amp; Forecasting</h3>
+<p>Identify growth patterns and forecast future outcomes based on historical data.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Discover high and low seasons for your sales and engagement</p>
+</li>
+<li>
+<p>Use machine learning or time-series analysis to estimate future performance</p>
+</li>
+</ul>
+<hr />
+<h2 id="search">Search</h2>
+<h3 id="market-industry-trends">Market &amp; Industry Trends</h3>
+<p>Uncover how markets are shifting and which industries are on the rise.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which sectors are experiencing the fastest post-pandemic recovery?</p>
+</li>
+<li>
+<p>What are the key factors influencing growth in the global e-commerce market?</p>
+</li>
+</ul>
+<h3 id="competitive-dynamics">Competitive Dynamics</h3>
+<p>Explore how brands stack up against each other and gain a strategic edge.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which companies are making an impact in the electric vehicle space?</p>
+</li>
+<li>
+<p>How are legacy retailers responding to digital-first competitors?</p>
+</li>
+</ul>
+<h3 id="consumer-insights-behaviour">Consumer Insights &amp; Behaviour</h3>
+<p>Dive into what drives customer decision-making and how preferences change over time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does brand loyalty differ between younger and older audiences?</p>
+</li>
+<li>
+<p>Which demographic segments are most receptive to sustainable product offerings?</p>
+</li>
+</ul>
+<h3 id="emerging-tech-innovations">Emerging Tech &amp; Innovations</h3>
+<p>Stay on top of the technologies reshaping industries and consumer experiences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What role does AI play in revolutionizing supply chain management?</p>
+</li>
+<li>
+<p>Which breakthroughs in quantum computing are set to disrupt traditional business models?</p>
+</li>
+</ul>
+<h3 id="policy-economic-indicators">Policy &amp; Economic Indicators</h3>
+<p>Gain perspective on how regulations and economic shifts influence business strategies.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do new data privacy laws impact digital advertising approaches?</p>
+</li>
+<li>
+<p>Which government incentives are accelerating the adoption of renewable energy?</p>
+</li>
+</ul>
+<h3 id="cultural-social-shifts">Cultural &amp; Social Shifts</h3>
+<p>Keep pace with shifting social norms, content preferences, and lifestyle changes.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the latest trends in remote work culture and employee well-being?</p>
+</li>
+<li>
+<p>How does social media usage shape brand perception among Gen Z?</p>
+</li>
+</ul>
+<hr />
+<h2 id="yougov">YouGov</h2>
+<h3 id="audiences">Audiences</h3>
+<p>Explore who people are and what shapes their behaviours and preferences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do spending habits vary across different age groups?</p>
+</li>
+<li>
+<p>How do personality traits influence consumer purchasing decisions?</p>
+</li>
+</ul>
+<h3 id="consumer-behavior">Consumer Behavior</h3>
+<p>Discover how consumers make purchasing decisions and interact with brands.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which brands are most trusted in the technology sector?</p>
+</li>
+<li>
+<p>How has streaming impacted traditional TV viewing habits?</p>
+</li>
+</ul>
+<h3 id="life-style-interests">Life Style Interests</h3>
+<p>Discover what people enjoy in their free time and what interests them most.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What motivates people when choosing vacation destinations?</p>
+</li>
+<li>
+<p>How quickly are consumers adopting new technologies like 5G?</p>
+</li>
+</ul>
+<hr />
+<h2 id="perplexity">Perplexity</h2>
+<p>Perplexity helps you explore a vast array of publicly available information from across the internet. From marketing and media insights to emerging trends and competitive intelligence, Perplexity brings a world of knowledge to your fingertips.</p>
+<h3 id="market-industry-trends_1">Market &amp; Industry Trends</h3>
+<p>Uncover how markets are shifting and which industries are on the rise.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which sectors are experiencing the fastest post-pandemic recovery?</p>
+</li>
+<li>
+<p>What are the key factors influencing growth in the global e-commerce market?</p>
+</li>
+</ul>
+<h3 id="competitive-dynamics_1">Competitive Dynamics</h3>
+<p>Explore how brands stack up against each other and gain a strategic edge.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which companies are making an impact in the electric vehicle space?</p>
+</li>
+<li>
+<p>How are legacy retailers responding to digital-first competitors?</p>
+</li>
+</ul>
+<h3 id="consumer-insights-behaviour_1">Consumer Insights &amp; Behaviour</h3>
+<p>Dive into what drives customer decision-making and how preferences change over time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does brand loyalty differ between younger and older audiences?</p>
+</li>
+<li>
+<p>Which demographic segments are most receptive to sustainable product offerings?</p>
+</li>
+</ul>
+<h3 id="emerging-tech-innovations_1">Emerging Tech &amp; Innovations</h3>
+<p>Stay on top of the technologies reshaping industries and consumer experiences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What role does AI play in revolutionizing supply chain management?</p>
+</li>
+<li>
+<p>Which breakthroughs in quantum computing are set to disrupt traditional business models?</p>
+</li>
+</ul>
+<h3 id="policy-economic-indicators_1">Policy &amp; Economic Indicators</h3>
+<p>Gain perspective on how regulations and economic shifts influence business strategies.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do new data privacy laws impact digital advertising approaches?</p>
+</li>
+<li>
+<p>Which government incentives are accelerating the adoption of renewable energy?</p>
+</li>
+</ul>
+<h3 id="cultural-social-shifts_1">Cultural &amp; Social Shifts</h3>
+<p>Keep pace with shifting social norms, content preferences, and lifestyle changes.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the latest trends in remote work culture and employee well-being?</p>
+</li>
+<li>
+<p>How does social media usage shape brand perception among Gen Z?</p>
+</li>
+</ul>
+<hr />
+<h2 id="gemini">Gemini</h2>
+<h3 id="information-processing-research">Information Processing &amp; Research</h3>
+<p>Gemini can quickly process large amounts of information and provide comprehensive analysis.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Synthesize research findings from multiple sources</p>
+</li>
+<li>
+<p>Extract key insights from complex datasets and reports</p>
+</li>
+</ul>
+<h3 id="creative-content-communication">Creative Content &amp; Communication</h3>
+<p>Gemini generates engaging content tailored to your audience and objectives.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Create compelling marketing copy and campaign materials</p>
+</li>
+<li>
+<p>Develop clear presentations and executive summaries</p>
+</li>
+</ul>
+<h3 id="data-analysis-insights">Data Analysis &amp; Insights</h3>
+<p>Gemini transforms raw data into actionable business intelligence.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Identify trends and patterns in market data</p>
+</li>
+<li>
+<p>Provide statistical analysis and interpretation</p>
+</li>
+</ul>
+<h3 id="strategic-thinking-planning">Strategic Thinking &amp; Planning</h3>
+<p>Gemini helps develop strategic approaches and solve complex business challenges.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Generate innovative solutions to business problems</p>
+</li>
+<li>
+<p>Assist with competitive analysis and market positioning</p>
+</li>
+</ul>
+<h3 id="technical-analytical-support">Technical &amp; Analytical Support</h3>
+<p>Gemini provides technical expertise and analytical frameworks for complex problems.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Break down complex technical concepts into understandable terms</p>
+</li>
+<li>
+<p>Assist with data modeling and forecasting approaches</p>
+</li>
+</ul>
+<hr />
+<h2 id="gwi">GWI</h2>
+<h3 id="digital-behavior-trends">Digital Behavior &amp; Trends</h3>
+<p>Uncover how users engage with technology and social platforms.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the latest trends in social media platform usage?</p>
+</li>
+<li>
+<p>How do users allocate their daily screen time across devices?</p>
+</li>
+</ul>
+<h3 id="e-commerce-consumer-purchasing-habits">E-Commerce &amp; Consumer Purchasing Habits</h3>
+<p>Discover the drivers behind online shopping behaviours and preferences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which products see the highest online engagement?</p>
+</li>
+<li>
+<p>How do global shopping habits vary by region in U.S.A?</p>
+</li>
+</ul>
+<h3 id="content-consumption-engagement">Content Consumption &amp; Engagement</h3>
+<p>Analyze what content resonates with audiences and how they consume it.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What types of content drive the most engagement?</p>
+</li>
+<li>
+<p>How are streaming and video consumption habits evolving?</p>
+</li>
+</ul>
+<h3 id="global-reach-demographic-trends">Global Reach &amp; Demographic Trends</h3>
+<p>Explore insights tailored to specific regions, cultures, and age groups.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How do digital behaviours differ between urban and rural populations?</p>
+</li>
+<li>
+<p>What are the key lifestyle trends shaping younger generations?</p>
+</li>
+</ul>
+<h3 id="real-time-market-opportunities">Real-time Market Opportunities</h3>
+<p>Identify emerging trends and gaps in the digital landscape.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which industries are seeing the fastest growth in online adoption?</p>
+</li>
+<li>
+<p>How can brands adapt to shifting consumer expectations?</p>
+</li>
+</ul>
+<hr />
+<h2 id="adaly">Adaly</h2>
+<h3 id="research-summarization">Research Summarization</h3>
+<p>Transform complex research into clear, actionable insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Summarize these YouGov survey results about Gen Z shopping habits into 5 key insights for our retail strategy</p>
+</li>
+<li>
+<p>Reword these Statista projections for our non-technical stakeholders</p>
+</li>
+</ul>
+<h3 id="communication-reporting">Communication &amp; Reporting</h3>
+<p>Create clear, impactful communications based on research findings.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Draft an email highlighting the competitive advantages discovered</p>
+</li>
+<li>
+<p>Create a report using our uploaded data and Statista benchmarks</p>
+</li>
+</ul>
+<h3 id="data-analysis">Data Analysis</h3>
+<p>Transform data into meaningful insights and narratives.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>Extract all consumer pain points mentioned in these uploaded focus group transcripts and rank by frequency</li>
+</ul>
+<h3 id="strategic-planning">Strategic Planning</h3>
+<p>Use research insights to inform strategic decisions and planning.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Simplify these forecasts from YouGov into clear implications for our 2026 strategic roadmap</p>
+</li>
+<li>
+<p>Generate three potential value propositions for our new service based on the customer need gaps identified in our latest research</p>
+</li>
+</ul>
+<hr />
+<h2 id="market-research">Market Research</h2>
+<h3 id="market-trends-analysis">Market Trends &amp; Analysis</h3>
+<p>Discover how various sectors—tech, retail, finance, etc.—are performing and evolving.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which industries are showing the fastest post-pandemic recovery?</p>
+</li>
+<li>
+<p>How are global economic shifts impacting consumer spending in different regions?</p>
+</li>
+</ul>
+<h3 id="competitive-dynamics_2">Competitive Dynamics</h3>
+<p>Uncover how companies position themselves and strategize in a crowded marketplace.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which brands are gaining the most market share in Southeast Asia?</p>
+</li>
+<li>
+<p>What tactics are traditional retailers using to compete with online giants?</p>
+</li>
+</ul>
+<h3 id="consumer-insights-behaviour_2">Consumer Insights &amp; Behaviour</h3>
+<p>Dive into what drives customer decision-making and how preferences change over time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the main factors affecting loyalty to a smartphone brand?</p>
+</li>
+<li>
+<p>How do sustainability concerns influence shoppers' choices in the fashion industry?</p>
+</li>
+</ul>
+<h3 id="emerging-tech-innovations_2">Emerging Tech &amp; Innovations</h3>
+<p>Stay ahead of the curve by exploring cutting-edge technology and its market implications.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which companies are leading the charge in quantum computing adoption?</p>
+</li>
+<li>
+<p>How is AI impacting competitive strategies in the automotive sector?</p>
+</li>
+</ul>
+<h3 id="policy-economic-indicators_2">Policy &amp; Economic Indicators</h3>
+<p>Understand how regulations, trade agreements, and economic shifts shape business strategies.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How are new data privacy rules affecting digital advertising approaches?</p>
+</li>
+<li>
+<p>What role do government incentives play in boosting renewable energy investments?</p>
+</li>
+</ul>
+<h3 id="cultural-social-shifts_2">Cultural &amp; Social Shifts</h3>
+<p>Get a pulse on changing societal values, media consumption, and lifestyle preferences.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does evolving workplace culture influence demand for remote collaboration tools?</p>
+</li>
+<li>
+<p>Which generational trends are steering the entertainment industry's focus?</p>
+</li>
+</ul>
+<hr />
+<h2 id="grok">Grok</h2>
+<h3 id="social-media-analysis">Social Media Analysis</h3>
+<p>Get real-time insights from X (Twitter) conversations and trends.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What are the trending discussions about climate change on X this week?</p>
+</li>
+<li>
+<p>Show me what people are saying about Nike on X in the last 24 hours</p>
+</li>
+</ul>
+<h3 id="real-time-intelligence">Real-Time Intelligence</h3>
+<p>Access and analyze the latest information and discussions.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Provide a detailed analysis of emerging trends in sustainable technology</p>
+</li>
+<li>
+<p>Synthesize information from various sources to create a comprehensive market overview</p>
+</li>
+</ul>
+<h3 id="advanced-analytics">Advanced Analytics</h3>
+<p>Convert complex data into clear, actionable insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>Analyze this dataset to identify major trends and patterns in consumer behavior</li>
+</ul>
+<h3 id="strategic-intelligence">Strategic Intelligence</h3>
+<p>Transform insights into strategic recommendations and action plans.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Analyze these market trends and provide strategic recommendations for future growth</p>
+</li>
+<li>
+<p>Create evidence-based recommendations for product development based on market analysis</p>
+</li>
+</ul>
+<hr />
+<h2 id="meta-ads">Meta Ads</h2>
+<p>The Meta Marketing Insights API is a component of the broader Meta Marketing API platform that specifically focuses on retrieving detailed performance data and analytics for advertising campaigns run across Meta's family of apps, including Facebook and Instagram.</p>
+<h3 id="campaign-performance-analytics">Campaign Performance Analytics</h3>
+<p>Unlock detailed metrics to evaluate ad effectiveness.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What is the ROI of my latest Instagram ad campaign?</p>
+</li>
+<li>
+<p>How do my Facebook and Instagram campaigns compare in terms of engagement rates?</p>
+</li>
+</ul>
+<h3 id="audience-segmentation-insights">Audience Segmentation &amp; Insights</h3>
+<p>Decode audience behavior with demographic and behavioral data.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which age groups respond best to video ads?</p>
+</li>
+<li>
+<p>How do conversion rates vary by geographic region?</p>
+</li>
+</ul>
+<h3 id="cross-platform-performance">Cross-Platform Performance</h3>
+<p>Compare and optimize campaigns across Meta's ecosystem.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does ad performance differ between desktop and mobile users?</p>
+</li>
+<li>
+<p>What are the top-performing content formats on Facebook vs. Instagram?</p>
+</li>
+</ul>
+<h3 id="roi-optimization-forecasting">ROI Optimization &amp; Forecasting</h3>
+<p>Maximize returns with predictive analytics and budget allocation insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Which campaigns have the highest potential for scaling?</p>
+</li>
+<li>
+<p>How can I reallocate budget to improve ROAS?</p>
+</li>
+</ul>
+<hr />
+<h2 id="google-ads">Google Ads</h2>
+<p>The Google Ads API provides programmatic access to campaign, ad group, and keyword-level data, enabling detailed analysis of performance metrics and optimization opportunities.</p>
+<h3 id="campaign-performance-metrics">Campaign Performance Metrics</h3>
+<p>Track fundamental performance indicators such as impressions, clicks, and conversions at the campaign level.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>What are the impressions for each campaign?</li>
+</ul>
+<h3 id="cost-conversion-analysis">Cost &amp; Conversion Analysis</h3>
+<p>Evaluate efficiency by analyzing cost per conversion and trends over time.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>What is the cost per conversion by campaign, and how does it trend over time?</li>
+</ul>
+<h3 id="segmentation-by-device-location-time">Segmentation by Device, Location &amp; Time</h3>
+<p>Understand how campaign outcomes vary across devices, geographic regions, and time dimensions.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>How does performance vary by device, location, and time of day?</li>
+</ul>
+<h3 id="quality-score-competitive-positioning">Quality Score &amp; Competitive Positioning</h3>
+<p>Analyze the relationship between Quality Scores, cost-per-click, and ad positioning.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>How do Quality Scores correlate with CPC and ad position?</li>
+</ul>
+<h3 id="time-based-comparison">Time-Based Comparison</h3>
+<p>Benchmark campaign performance across different time periods to track efficiency and growth.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>How does August CAC performance compare to July?</p>
+</li>
+<li>
+<p>What is the top performing time of day in terms of CAC?</p>
+</li>
+</ul>
+<hr />
+<h2 id="mydata">MyData</h2>
+<h3 id="organize-query-by-folder-or-file">Organize &amp; Query by Folder or File</h3>
+<p>Group files by campaign, client, or topic to streamline your insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What were the top-performing channels across all Q3 marketing assets?</p>
+</li>
+<li>
+<p>Summarize the key takeaways from the "July Campaign Overview.pdf" file</p>
+</li>
+</ul>
+<h3 id="understand-file-type-strengths">Understand File Type Strengths</h3>
+<p>Group files by campaign, client, or topic to streamline your insights.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Extract the competitor pricing models from the 'Benchmarking Report.pdf'</p>
+</li>
+<li>
+<p>Summarize client feedback from the 'Customer Survey Analysis.docx'</p>
+</li>
+<li>
+<p>What were the main goals listed in the 'Brand Strategy Presentation.pptx'?</p>
+</li>
+</ul>
+<h3 id="get-cross-document-insights">Get Cross-Document Insights</h3>
+<p>Search across multiple documents to find patterns or compile key information.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>What budget allocations were proposed across all 2024 planning docs?</p>
+</li>
+<li>
+<p>List all KPIs mentioned in the marketing decks from last year</p>
+</li>
+</ul>
+<h3 id="use-urls-for-dynamic-referencing">Use URLs for Dynamic Referencing</h3>
+<p>Upload or reference live web content for AI-powered summarization and analysis.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Summarize the key takeaways from this McKinsey article on digital marketing trends</p>
+</li>
+<li>
+<p>What are the growth projections according to the Forrester report I linked?</p>
+</li>
+</ul>
+<hr />
+<h2 id="cohere">Cohere</h2>
+<h3 id="text-generation-writing">Text Generation &amp; Writing</h3>
+<p>Create high-quality content tailored to your specific requirements and style.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Generate marketing copy and promotional materials</p>
+</li>
+<li>
+<p>Draft professional reports and business documents</p>
+</li>
+</ul>
+<h3 id="language-understanding-analysis">Language Understanding &amp; Analysis</h3>
+<p>Analyze and extract meaning from text with advanced natural language processing.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Perform sentiment analysis on customer feedback</p>
+</li>
+<li>
+<p>Extract key themes and insights from documents</p>
+</li>
+</ul>
+<h3 id="content-summarization">Content Summarization</h3>
+<p>Distill complex information into clear, concise summaries.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Summarize research papers and industry reports</p>
+</li>
+<li>
+<p>Create executive summaries from detailed analyses</p>
+</li>
+</ul>
+<h3 id="classification-categorization">Classification &amp; Categorization</h3>
+<p>Organize and classify text-based content efficiently.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Categorize customer inquiries and support tickets</p>
+</li>
+<li>
+<p>Tag and organize content for better searchability</p>
+</li>
+</ul>
+<h3 id="search-information-retrieval">Search &amp; Information Retrieval</h3>
+<p>Find relevant information quickly from large text collections.</p>
+<p><strong>Sample Queries:</strong></p>
+<ul>
+<li>
+<p>Search through knowledge bases for specific information</p>
+</li>
+<li>
+<p>Identify relevant passages from extensive documentation</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

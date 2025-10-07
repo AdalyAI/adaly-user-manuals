@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../integrations/connector-requests/request-connector/">
+        <link rel="prev" href="../configure-snowflake-connector/">
       
       
-        <link rel="next" href="../change-your-password/">
+        <link rel="next" href="../configure-yougov-connector/">
       
       
-      <link rel="icon" href="../../assets/logos/adaly.png">
+      <link rel="icon" href="../../../assets/logos/adaly.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Change Your Name - Manual</title>
+        <title>Configure Statista Connector - Manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/fonts.css">
+      <link rel="stylesheet" href="../../../stylesheets/fonts.css">
     
-      <link rel="stylesheet" href="../../stylesheets/colors.css">
+      <link rel="stylesheet" href="../../../stylesheets/colors.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#change-your-name" class="md-skip">
+        <a href="#configure-statista-connector" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Manual" class="md-header__button md-logo" aria-label="Manual" data-md-component="logo">
+    <a href="../../.." title="Manual" class="md-header__button md-logo" aria-label="Manual" data-md-component="logo">
       
-  <img src="../../assets/logos/adaly.png" alt="logo">
+  <img src="../../../assets/logos/adaly.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Change Your Name
+              Configure Statista Connector
             
           </span>
         </div>
@@ -187,9 +187,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Manual" class="md-nav__button md-logo" aria-label="Manual" data-md-component="logo">
+    <a href="../../.." title="Manual" class="md-nav__button md-logo" aria-label="Manual" data-md-component="logo">
       
-  <img src="../../assets/logos/adaly.png" alt="logo">
+  <img src="../../../assets/logos/adaly.png" alt="logo">
 
     </a>
     Manual
@@ -204,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -302,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chat/queries/querying-a-data-source/" class="md-nav__link">
+      <a href="../../../chat/queries/querying-a-data-source/" class="md-nav__link">
         
   
   
@@ -325,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chat/queries/querying-a-file-upload/" class="md-nav__link">
+      <a href="../../../chat/queries/querying-a-file-upload/" class="md-nav__link">
         
   
   
@@ -348,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chat/queries/querying-multiple-data-sources/" class="md-nav__link">
+      <a href="../../../chat/queries/querying-multiple-data-sources/" class="md-nav__link">
         
   
   
@@ -371,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chat/queries/sample-queries/" class="md-nav__link">
+      <a href="../../../chat/queries/sample-queries/" class="md-nav__link">
         
   
   
@@ -406,18 +406,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -433,7 +435,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Integrations
@@ -447,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/authenticate-connector-for-brand/" class="md-nav__link">
+      <a href="../../authenticate-connector-for-brand/" class="md-nav__link">
         
   
   
@@ -467,18 +469,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -494,7 +498,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Configure connectors
@@ -508,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-chatgpt-connector/" class="md-nav__link">
+      <a href="../configure-chatgpt-connector/" class="md-nav__link">
         
   
   
@@ -531,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-civic-science-connector/" class="md-nav__link">
+      <a href="../configure-civic-science-connector/" class="md-nav__link">
         
   
   
@@ -554,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-claude-connector/" class="md-nav__link">
+      <a href="../configure-claude-connector/" class="md-nav__link">
         
   
   
@@ -577,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-cohere-connector/" class="md-nav__link">
+      <a href="../configure-cohere-connector/" class="md-nav__link">
         
   
   
@@ -600,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-ga4-connector/" class="md-nav__link">
+      <a href="../configure-ga4-connector/" class="md-nav__link">
         
   
   
@@ -623,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-gemini-connector/" class="md-nav__link">
+      <a href="../configure-gemini-connector/" class="md-nav__link">
         
   
   
@@ -646,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-grok-connector/" class="md-nav__link">
+      <a href="../configure-grok-connector/" class="md-nav__link">
         
   
   
@@ -669,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-gwi-connector/" class="md-nav__link">
+      <a href="../configure-gwi-connector/" class="md-nav__link">
         
   
   
@@ -692,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-perplexity-connector/" class="md-nav__link">
+      <a href="../configure-perplexity-connector/" class="md-nav__link">
         
   
   
@@ -715,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-snowflake-connector/" class="md-nav__link">
+      <a href="../configure-snowflake-connector/" class="md-nav__link">
         
   
   
@@ -735,10 +739,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-statista-connector/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -749,6 +762,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -761,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/configure-connectors/configure-yougov-connector/" class="md-nav__link">
+      <a href="../configure-yougov-connector/" class="md-nav__link">
         
   
   
@@ -830,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/connector-requests/confirm-a-connector-request/" class="md-nav__link">
+      <a href="../../connector-requests/confirm-a-connector-request/" class="md-nav__link">
         
   
   
@@ -853,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/connector-requests/request-connector/" class="md-nav__link">
+      <a href="../../connector-requests/request-connector/" class="md-nav__link">
         
   
   
@@ -888,20 +902,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -917,7 +929,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Profile
@@ -928,19 +940,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../profile/change-your-name/" class="md-nav__link">
         
   
   
@@ -951,7 +954,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -964,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../change-your-password/" class="md-nav__link">
+      <a href="../../../profile/change-your-password/" class="md-nav__link">
         
   
   
@@ -1021,14 +1023,23 @@
 
 
 
-<h1 id="change-your-name">Change Your Name</h1>
-<p>1. Hover over your Profile Picture in the top right</p>
-<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-02/1802c570-5897-4b59-8f76-70d26c932298/ascreenshot.jpeg?tl_px=0,161&amp;br_px=2222,1402&amp;force_format=jpeg&amp;q=100&amp;width=1120.0" /></p>
-<p>2. Click "Account Settings"</p>
-<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-02/1802c570-5897-4b59-8f76-70d26c932298/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2222,1241&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=944,175" /></p>
-<p>3. Click "Change" under your Name</p>
-<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-02/a02e686c-438e-4f9d-9598-135e194c1e37/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2222,1241&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=479,268" /></p>
-<p>4. Enter your new name, and press Enter to confirm the change</p>
+<h1 id="configure-statista-connector">Configure Statista Connector</h1>
+<p>1. Hover over the Plus icon to open the Navigation Menu</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/c96be43f-d927-40bd-8722-303dae6b32e3/ascreenshot.jpeg?tl_px=0,161&amp;br_px=2220,1402&amp;force_format=jpeg&amp;q=100&amp;width=1120.0" /></p>
+<p>2. Click on the Integrations logo.</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/c96be43f-d927-40bd-8722-303dae6b32e3/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2220,1240&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=-7,166" /></p>
+<p>3. Click "My Connectors"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/fc5f715e-4fba-4250-b9a2-5586582c13a4/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2220,1240&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=193,159" /></p>
+<p>4. Click the Gear icon</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/ebb3ccb8-3296-4bbe-8f66-dce5d917e2ab/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2220,1240&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=956,230" /></p>
+<p>5. Click "Configure"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/45db7a7e-364e-4342-a18b-01c4d5cb77ae/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2220,1240&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=891,256" /></p>
+<p>6. Click the "Type or Paste Key Here" field and enter your API key</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/b7bfd16e-b9a5-4752-98ea-30ed57b6ba81/ascreenshot.jpeg?tl_px=0,0&amp;br_px=2220,1240&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=666,272" /></p>
+<p>7. Click "Authenticate"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/8a7b03fd-ef49-4f9b-9329-d0c22fabcea0/user_cropped_screenshot.webp?tl_px=0,0&amp;br_px=2220,1564&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=873,272" /></p>
+<p>8. Click "Finish"</p>
+<p><img alt="" src="https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/c58533c0-353b-43e1-85bf-18120b68cf72/ascreenshot.jpeg?tl_px=0,323&amp;br_px=2220,1564&amp;force_format=jpeg&amp;q=100&amp;width=1120.0&amp;wat=1&amp;wat_opacity=0.7&amp;wat_gravity=northwest&amp;wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&amp;wat_pad=914,424" /></p>
 
 
 
@@ -1077,10 +1088,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
