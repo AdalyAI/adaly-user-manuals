@@ -12,3 +12,5 @@ theme:
 extra_css:
   - stylesheets/fonts.css
   - stylesheets/colors.css
+markdown_extensions:
+  - attr_list
