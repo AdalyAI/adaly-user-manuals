@@ -10,3 +10,12 @@
     filter: none !important;
     opacity: 1 !important;
 }
+
+.md-search {
+  opacity: 0.6 !important;
+}
+
+.md-search:focus {
+  opacity: 1 !important;
+  color: #ffffff !important;
+}
