@@ -1,48 +1,39 @@
-# Authenticating a Connector for all brands
+# Authenticating a Connector for All Brands
 
-1\. Hover over the Plus icon to open the Navigation Menu
+1\. Hover over the plus icon to open the navigation menu
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/08654f61-b76e-4a0f-94a4-ee8fd906cdfa/ascreenshot.jpeg?tl_px=0,161&br_px=2220,1402&force_format=jpeg&q=100&width=1120.0)
-
-
-2\. Click on the Integrations logo.
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/08654f61-b76e-4a0f-94a4-ee8fd906cdfa/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=3,158)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/a3c37f14-4d54-4b69-9679-4070eb30f072/ascreenshot.jpeg?tl_px=0,161&br_px=2220,1402&force_format=jpeg&q=100&width=1120.0)
 
 
-3\. Click "Brand Voice"
+2\. Click the Integrations icon
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/69a68fdb-d4ce-4fce-b40e-1aa0270268a1/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=149,272)
-
-
-4\. Click on your intended brand
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/3916b5cf-c39f-4da6-9363-48aeea149d9d/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=405,170)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/a3c37f14-4d54-4b69-9679-4070eb30f072/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=2,164)
 
 
-5\. Click "My Connectors"
+3\. Click "My Connectors"
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/01eb7656-a059-483e-9dbf-5f83c3ebb662/ascreenshot.jpeg?tl_px=0,323&br_px=2220,1564&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=775,362)
-
-
-6\. Click this icon.
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/6b16f5f4-b43a-48c9-b1d5-016c0140800c/ascreenshot.jpeg?tl_px=0,223&br_px=2220,1464&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=631,277)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/a95cfc2b-5040-4129-a1b0-e6638e4914c3/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=235,178)
 
 
-7\. Click "Configure"
+4\. Click on the gear icon of the connector you'd like to authenticate
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/ed2cf41a-54bc-4f10-9e54-f25ee810667d/ascreenshot.jpeg?tl_px=0,315&br_px=2220,1556&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=574,276)
-
-
-8\. Click "Click to Authenticate"
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/846cf57b-c423-43ba-af32-e95ef455539b/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=415,265)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/eed1c64a-ae91-4c02-b4db-3d0d75054da7/ascreenshot.jpeg?tl_px=0,323&br_px=2220,1564&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=951,360)
 
 
-Tip: This activates the connector for all brands by default. You can use the toggles on the left hand side to activate/deactivate this connector for specific brands.
+5\. Click Configure
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/75c2f8d2-6d84-4564-b8b0-88f825cbc826/ascreenshot.jpeg?tl_px=0,323&br_px=2220,1564&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=915,386)
 
 
-9\. Click "Finish"
+6\. Click "Click to Authenticate"
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-06/dcd11971-4b91-46c1-8741-1336c580ec48/ascreenshot.jpeg?tl_px=0,323&br_px=2220,1564&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=939,434)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/f38b9a1e-bced-4ffb-9dda-96ad6d0d7b2a/ascreenshot.jpeg?tl_px=0,0&br_px=2220,1240&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=454,251)
+
+
+7\. Click "Finish"
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-10-08/b24961df-4c18-4ed2-87eb-4a36e80dfa7c/ascreenshot.jpeg?tl_px=0,323&br_px=2220,1564&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=946,433)
+
+
+Tip: Use the toggles on the right hand side to activate the connector on/off for specific brands!
+

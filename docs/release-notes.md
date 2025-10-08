@@ -1,6 +1,6 @@
 # Release Notes
 
-Welcome to Adaly's release notes. Below you'll find a comprehensive list of all releases with summaries and links to the full documentation.
+Below you'll find a comprehensive list of all releases with summaries and links to the full documentation.
 
 ---
 
