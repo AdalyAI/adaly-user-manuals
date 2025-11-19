@@ -6,11 +6,61 @@ Below you'll find a comprehensive list of all releases with summaries and links 
 
 ## Latest Releases
 
+### v2.5.1
+Nov 19, 2025
+
+
+This release brings two major upgrades: a redesigned Sign Up / Sign In experience and the launch of the Bloomfire Connector, enabling deep research-driven insights inside Adaly. We've also improved UI consistency, strengthened Salesforce reliability, and resolved several visualization and data display issues.
+
+[📄 **View Full Release Notes**](release-notes-files/2.5.1.pdf){:target="_blank"}
+
+---
+
+### v2.5.0
+Nov 17, 2025
+
+
+This release introduces an improved Sign Up and Sign In experience, along with several quality-of-life enhancements. We've refined UI elements, strengthened Salesforce reliability, and resolved key visualization and data display issues.
+
+[📄 **View Full Release Notes**](release-notes-files/2.5.0.pdf){:target="_blank"}
+
+---
+
+### v2.4.9
+Nov 5, 2025
+
+
+This release introduces the new Shopify Connector—bringing store data, visualizations, and insights directly into Adaly—alongside major UI polish, improved right-side panels and Shelves, smoother onboarding, and general performance and reliability fixes.
+
+[📄 **View Full Release Notes**](release-notes-files/2.4.9.pdf){:target="_blank"}
+
+---
+
+### v2.4.8
+Oct 29, 2025
+
+
+This release improves team management, ad insights, and connector reliability. Highlights include bulk user invites, enhanced Meta and Google Ads panels, updated data source overviews, and optimizations for Salesforce, YouGov, and company uploads, plus key bug fixes.
+
+[📄 **View Full Release Notes**](release-notes-files/2.4.8.pdf){:target="_blank"}
+
+---
+
+### v2.4.7
+Oct 8, 2025
+
+
+We've introduced full support for Google Ads and Meta Ads, bringing powerful campaign insights directly into your workflows. Alongside these new integrations, we've made several fixes and enhancements to improve platform stability and visibility across your data.
+
+[📄 **View Full Release Notes**](release-notes-files/2.4.7.pdf){:target="_blank"}
+
+---
+
 ### v2.4.6
 Oct 1, 2025
 
 
-Today’s release includes a powerful new way to collaborate with your team’s data, fresh updates to our YouGov integration, and several platform-wide bug fixes.
+Today's release includes a powerful new way to collaborate with your team's data, fresh updates to our YouGov integration, and several platform-wide bug fixes.
 
 [📄 **View Full Release Notes**](release-notes-files/v2.4.6.pdf){:target="_blank"}
 
